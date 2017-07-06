@@ -41,7 +41,7 @@ Final Balance: 0.
 $ btccheck This is a string of text. --json
 ```
   
-```json
+```javascript
 { final_balance: 0,  
   n_tx: 0,  
   total_received: 0,  
