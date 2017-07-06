@@ -22,7 +22,7 @@ getJSON(`https://blockchain.info/balance?active=${address}`, (err, res) => {
   if(argv.json){
     info.address = address;
     info.wif = keyPair.toWIF();
-    console.log(info);
+    console.log(JSON.stringify(info, null, 2));
     return;
   }
   console.log(`Number of Transactions: ${info.n_tx}.`);

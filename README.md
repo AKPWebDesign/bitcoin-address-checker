@@ -41,12 +41,14 @@ Final Balance: 0.
 $ btccheck This is a string of text. --json
 ```
   
-```javascript
-{ final_balance: 0,  
-  n_tx: 0,  
-  total_received: 0,  
-  address: '12sRotJXv9y34n1suR85mcs86RrSx81W7m',  
-  wif: 'L2NiYzN8MVMzbd3NFLz64YdCmUGcLGUCjfsL92Qn6Uoybgdm6MQC' }  
+```json
+{
+  "final_balance": 0,
+  "n_tx": 0,
+  "total_received": 0,
+  "address": "12sRotJXv9y34n1suR85mcs86RrSx81W7m",
+  "wif": "L2NiYzN8MVMzbd3NFLz64YdCmUGcLGUCjfsL92Qn6Uoybgdm6MQC"
+}
 ```
 
 ## License
