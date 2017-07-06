@@ -10,8 +10,10 @@
   "version": "1.0.1",
   "description": "Checks Bitcoin addresses for existing coin.",
   "main": "index.js",
-  "author": "Austin Peterson",
+  "author": "Austin Peterson <austin@akpwebdesign.com> (https://blog.akpwebdesign.com)",
   "license": "MIT",
+  "keywords": ["bitcoin", "btc", "bitcoinjs"],
+  "repository": "gist:4eda40266ef9390958f7dd7b7a45f228",
   "bin": {
     "bitcoin-address-checker": "index.js",
     "btccheck": "index.js"
