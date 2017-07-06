@@ -19,6 +19,8 @@ if(!argv.json) {
 getJSON(`https://blockchain.info/balance?active=${address}`, (err, res) => {
   if(err) { console.error(err); return;}
   let info = res[address];
+  info.final_balance = fromSatoshis(info.final_balance);
+  info.total_received = fromSatoshis(info.total_received);
   if(argv.json){
     info.address = address;
     info.wif = keyPair.toWIF();
@@ -29,3 +31,7 @@ getJSON(`https://blockchain.info/balance?active=${address}`, (err, res) => {
   console.log(`BTC Received: ${info.total_received}.`);
   console.log(`Final Balance: ${info.final_balance}.`);
 });
+
+function fromSatoshis(val) {
+  return Number(val/100000000).toFixed(8);
+}
