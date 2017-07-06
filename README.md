@@ -4,30 +4,20 @@
 
 ## Installation
 ### Using Yarn:
-```bash
-yarn global add bitcoin-address-checker
-```
+`yarn global add bitcoin-address-checker`
 
 ### Using npm:
-```bash
-npm i -g bitcoin-address-checker
-```
+`npm i -g bitcoin-address-checker`
 
 ## Usage
-```bash
-$ bitcoin-address-checker <string...> [--json]
-```
+`$ bitcoin-address-checker <string...> [--json]`
 
 ### Or...
-```bash
-$ btccheck <string...> [--json]
-```
+`$ btccheck <string...> [--json]`
 
 ## Examples
 ### Checking a string for BTC.
-```bash
-$ btccheck This is a string of text.
-```
+`$ btccheck This is a string of text.`
 
 ```
 Address: 12sRotJXv9y34n1suR85mcs86RrSx81W7m, Key: L2NiYzN8MVMzbd3NFLz64YdCmUGcLGUCjfsL92Qn6Uoybgdm6MQC  
@@ -37,9 +27,7 @@ Final Balance: 0.
 ```
 
 ### Checking a string for BTC, returning raw JSON.
-```bash
-$ btccheck This is a string of text. --json
-```
+`$ btccheck This is a string of text. --json`
   
 ```json
 {
