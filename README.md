@@ -20,10 +20,11 @@
 `$ btccheck This is a string of text.`
 
 ```
-Address: 12sRotJXv9y34n1suR85mcs86RrSx81W7m, Key: L2NiYzN8MVMzbd3NFLz64YdCmUGcLGUCjfsL92Qn6Uoybgdm6MQC
-Number of Transactions: 0.
-BTC Received: 0.00000000.
-Final Balance: 0.00000000.
+Address: 12sRotJXv9y34n1suR85mcs86RrSx81W7m
+WIF: L2NiYzN8MVMzbd3NFLz64YdCmUGcLGUCjfsL92Qn6Uoybgdm6MQC
+Number of Transactions: 0
+BTC Received: 0.00000000
+Final Balance: 0.00000000
 ```
 
 ### Checking a string for BTC, returning raw JSON.
@@ -35,8 +36,21 @@ Final Balance: 0.00000000.
   "n_tx": 0,
   "total_received": 0,
   "address": "12sRotJXv9y34n1suR85mcs86RrSx81W7m",
-  "wif": "L2NiYzN8MVMzbd3NFLz64YdCmUGcLGUCjfsL92Qn6Uoybgdm6MQC"
+  "wif": "L2NiYzN8MVMzbd3NFLz64YdCmUGcLGUCjfsL92Qn6Uoybgdm6MQC",
+  "success": true
 }
+```
+*Note: `success` should be false if btccheck encounters an error.*
+
+### Passing data in using stdin
+`$ echo This is a string of text.| btccheck --stdin`
+
+```
+Address: 12sRotJXv9y34n1suR85mcs86RrSx81W7m
+WIF: L2NiYzN8MVMzbd3NFLz64YdCmUGcLGUCjfsL92Qn6Uoybgdm6MQC
+Number of Transactions: 0
+BTC Received: 0.00000000
+Final Balance: 0.00000000
 ```
 
 ## License
