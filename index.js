@@ -12,12 +12,16 @@ let keyPair = new bitcoin.ECPair(d);
 
 let address = keyPair.getAddress();
 
-console.log(`Address: ${address}, Key: ${keyPair.toWIF()}`);
+if(!argv.json) {
+  console.log(`Address: ${address}, Key: ${keyPair.toWIF()}`);
+}
 
 getJSON(`https://blockchain.info/balance?active=${address}`, (err, res) => {
   if(err) { console.error(err); return;}
   let info = res[address];
   if(argv.json){
+    info.address = address;
+    info.wif = keyPair.toWIF();
     console.log(info);
     return;
   }
