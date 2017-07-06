@@ -7,7 +7,7 @@
     "open": "^0.0.5"
   },
   "name": "bitcoin-address-checker",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Checks Bitcoin addresses for existing coin.",
   "main": "index.js",
   "author": "Austin Peterson",
