@@ -1,0 +1,19 @@
+{
+  "dependencies": {
+    "bigi": "^1.4.2",
+    "bitcoinjs-lib": "^3.1.0",
+    "get-json": "^0.0.3",
+    "minimist": "^1.2.0",
+    "open": "^0.0.5"
+  },
+  "name": "bitcoin-address-checker",
+  "version": "0.0.1",
+  "description": "Checks Bitcoin addresses for existing coin.",
+  "main": "index.js",
+  "author": "Austin Peterson",
+  "license": "MIT",
+  "bin":{
+    "bitcoin-address-checker": "index.js",
+    "btccheck": "index.js"
+  }
+}
