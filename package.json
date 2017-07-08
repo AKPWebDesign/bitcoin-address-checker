@@ -2,9 +2,9 @@
   "dependencies": {
     "bigi": "^1.4.2",
     "bitcoinjs-lib": "^3.1.0",
+    "bluebird": "^3.5.0",
     "get-json": "^0.0.3",
-    "minimist": "^1.2.0",
-    "open": "^0.0.5"
+    "minimist": "^1.2.0"
   },
   "name": "bitcoin-address-checker",
   "version": "1.4.0",
@@ -19,7 +19,7 @@
   ],
   "repository": "gist:4eda40266ef9390958f7dd7b7a45f228",
   "bin": {
-    "bitcoin-address-checker": "index.js",
-    "btccheck": "index.js"
+    "bitcoin-address-checker": "bin/cli.js",
+    "btccheck": "bin/cli.js"
   }
 }
