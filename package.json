@@ -6,7 +6,7 @@
     "minimist": "^1.2.0"
   },
   "name": "bitcoin-address-checker",
-  "version": "3.0.0",
+  "version": "3.0.1",
   "description": "Checks Bitcoin addresses for existing coin.",
   "main": "index.js",
   "author": "Austin Peterson <austin@akpwebdesign.com> (https://blog.akpwebdesign.com)",
