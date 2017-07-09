@@ -17,7 +17,7 @@
     "btc",
     "bitcoinjs"
   ],
-  "repository": "gist:4eda40266ef9390958f7dd7b7a45f228",
+  "repository": "AKPWebDesign/bitcoin-address-checker",
   "bin": {
     "bitcoin-address-checker": "bin/cli.js",
     "btccheck": "bin/cli.js"
