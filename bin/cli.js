@@ -19,7 +19,7 @@ if(argv.stdin) {
 }
 
 function doWork(str) {
-  return getInfo(str).then((info) => {
+  return getInfo(str, argv.compressed).then((info) => {
     if(argv.json) {
       return console.log(JSON.stringify(info, null, 2));
     }

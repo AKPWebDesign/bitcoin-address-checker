@@ -9,10 +9,13 @@ function hashString(str) {
   });
 }
 
-function generateKeyPair(hash) {
+function generateKeyPair(hash, compressed) {
   return new Promise((resolve) => {
     let bigint = bigi.fromBuffer(hash);
-    let keyPair = new bitcoin.ECPair(bigint);
+    if(compressed === null || compressed === undefined) {
+      compressed = false;
+    }
+    let keyPair = new bitcoin.ECPair(bigint, null, {compressed: compressed});
     return resolve(keyPair);
   });
 }
@@ -34,9 +37,9 @@ function getAddressInfo(address) {
   });
 }
 
-function getAddressInfoFromString(str) {
+function getAddressInfoFromString(str, forceCompressed) {
   return hashString(str).then((hash) => {
-    return generateKeyPair(hash);
+    return generateKeyPair(hash, forceCompressed);
   }).then((keyPair) => {
     return getAddressInfo(keyPair.getAddress())
             .then((info) => {

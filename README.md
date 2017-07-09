@@ -20,8 +20,8 @@
 `$ btccheck This is a string of text.`
 
 ```
-Address: 12sRotJXv9y34n1suR85mcs86RrSx81W7m
-WIF: L2NiYzN8MVMzbd3NFLz64YdCmUGcLGUCjfsL92Qn6Uoybgdm6MQC
+Address: 1MmK5o62Zi7B7oXpFWQGZGwuZ8uouMThGp
+WIF: 5Jz2iET5qbX8cV6yUGQMdboidoxeTZxZ7Vk84BHiUybfCYRgJDL
 Number of Transactions: 0
 BTC Received: 0.00000000
 Final Balance: 0.00000000
@@ -35,8 +35,8 @@ Final Balance: 0.00000000
   "final_balance": 0,
   "n_tx": 0,
   "total_received": 0,
-  "address": "12sRotJXv9y34n1suR85mcs86RrSx81W7m",
-  "wif": "L2NiYzN8MVMzbd3NFLz64YdCmUGcLGUCjfsL92Qn6Uoybgdm6MQC",
+  "address": "1MmK5o62Zi7B7oXpFWQGZGwuZ8uouMThGp",
+  "wif": "5Jz2iET5qbX8cV6yUGQMdboidoxeTZxZ7Vk84BHiUybfCYRgJDL",
   "success": true
 }
 ```
@@ -44,6 +44,17 @@ Final Balance: 0.00000000
 
 ### Passing data in using stdin
 `$ echo This is a string of text.| btccheck --stdin`
+
+```
+Address: 1MmK5o62Zi7B7oXpFWQGZGwuZ8uouMThGp
+WIF: 5Jz2iET5qbX8cV6yUGQMdboidoxeTZxZ7Vk84BHiUybfCYRgJDL
+Number of Transactions: 0
+BTC Received: 0.00000000
+Final Balance: 0.00000000
+```
+
+### Using compressed keys
+`$ btccheck This is a string of text. --compressed`
 
 ```
 Address: 12sRotJXv9y34n1suR85mcs86RrSx81W7m
