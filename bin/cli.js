@@ -30,12 +30,9 @@ function doWork(str) {
     console.log(`Final Balance: ${fromSatoshis(info.final_balance)}`);
   }, (err) => {
     if(argv.json) {
-      return console.log(JSON.stringify({
-        success: false,
-        error: err
-      }, null, 2));
+      return console.log(JSON.stringify(err, null, 2));
     }
-    return console.error(err);
+    return console.error(`Error! Details: "${err.error}"`);
   });
 }
 

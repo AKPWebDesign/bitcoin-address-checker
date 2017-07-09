@@ -1,6 +1,6 @@
 const bigi = require('bigi');
 const bitcoin = require('bitcoinjs-lib');
-const getJSON = require('get-json');
+const request = require('request');
 const Promise = require('bluebird');
 
 function hashString(str) {
@@ -22,14 +22,20 @@ function generateKeyPair(hash, compressed) {
 
 function getAddressInfo(address) {
   return new Promise((resolve, reject) => {
-    getJSON(`https://blockchain.info/balance?active=${address}`, (err, res) => {
+    request({ url: `https://blockchain.info/balance?active=${address}`, json: true }, function (err, res, body) {
       if(err) {
         return reject({
           success: false,
           error: err
         });
       }
-      let info = res[address];
+      if(res.statusCode != 200) {
+        return reject({
+          success: false,
+          error: `blockchain.info returned an error: ${res.statusCode}.`
+        });
+      }
+      let info = body[address];
       info.address = address;
       info.success = true;
       return resolve(info);
