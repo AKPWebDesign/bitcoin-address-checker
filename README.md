@@ -64,6 +64,9 @@ BTC Received: 0.00000000
 Final Balance: 0.00000000
 ```
 
+### Only output when a non-zero final balance exists
+`$ btccheck This is a string of text. --nonzero`
+
 ## License
 ```
 Copyright 2017 Austin Peterson <austin@akpwebdesign.com> (https://blog.akpwebdesign.com)
